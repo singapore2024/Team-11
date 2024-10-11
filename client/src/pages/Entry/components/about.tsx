@@ -10,11 +10,11 @@ const About: React.FC<EntryBannerProps> = (props) => {
         <div className={'entryContainer'} ref={props.sectionRef}>
             <div className={cn('about', 'fullHeight')}>
                 <div className={'sectionHeading'}>About Us</div>
-                <h1>let's kaypoh!</h1>
+                <h1>let's farm!</h1>
 
                 <div className={cn('accentText')}>
                     <a href='https://www.urbandictionary.com/define.php?term=kaypoh'>
-                        <b><i>Kay-poh </i></b>/ noun & adjective
+                        <b><i>farm</i></b>/ noun & adjective
                     </a>
                 </div>
 

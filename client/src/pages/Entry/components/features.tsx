@@ -31,7 +31,7 @@ const Features: React.FC<EntryBannerProps> = (props) => {
             title: 'Step 1: Locate a senior around you',
             icon: <EnvironmentOutlined />,
             children: (
-                <div>Find a senior near you that speaks the same language as you. </div>
+                <div>Find a farm near you.</div>
             )
         },
         {
@@ -39,7 +39,7 @@ const Features: React.FC<EntryBannerProps> = (props) => {
             title: 'Step 2: Set up a visit ',
             icon: <CalendarOutlined />,
             children: (
-                <div>Select a convenient time for your visit. Once confirmed, a social worker will accompany you on your first visit.</div>
+                <div>Select a convenient time for you to head down to farm.</div>
             )
         },
         {
@@ -47,7 +47,7 @@ const Features: React.FC<EntryBannerProps> = (props) => {
             title: 'Step 3: Show up and chat! ',
             icon: <HomeOutlined />,
             children: (
-                <div>Go for your visit and have a chat with the senior to check in how they're doing. It can be for as short as 10 minutes.</div>
+                <div>Go to your farm and have a chat with the other farmers to check in how they're doing. You can do whatever to help with the community.</div>
             )
         },
         {
@@ -55,7 +55,7 @@ const Features: React.FC<EntryBannerProps> = (props) => {
             title: 'Step 4: Record Visit Notes ',
             icon: <FileDoneOutlined />,
             children: (
-                <div>Once your visit is completed, record your observations in our post-visit form to highlight if the senior requires any extra attention or resources.</div>
+                <div>Once your farm is completed, record your observations in our post-visit form to highlight if the farm requires any extra attention or resources.</div>
             )
         }
     ]
@@ -78,7 +78,7 @@ const Features: React.FC<EntryBannerProps> = (props) => {
         <div className={'entryContainer'} ref={props.sectionRef}>
             <div className={cn('featurebanner', 'fullHeight')}>
                 <div className={'sectionHeading'}>How it works</div>
-                <h1>let's kaypoh!</h1>
+                <h1>let's farm!</h1>
 
                 {featureItems}
 

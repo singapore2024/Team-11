@@ -18,17 +18,17 @@ const LandingBanner: React.FC<Props> = ({ onClickRegister, onClickAbout }) => {
             <div className={cn('fullHeight', 'banner')}>
                 <img className={'bannerImg'} src={BannerImg} />
 
-                <div className={'subtitle'}>rebuild the kampung spirit with</div>
-                <h1>let's kaypoh!</h1>
+                <div className={'subtitle'}>rebuild the farm spirit with</div>
+                <h1>let's farm!</h1>
                 <div className='accentText'>
-                    Redefining volunteering with the elderly.
+                    Redefining local produce with community farming.
                 </div>
                 <p className='bannerText'>
-                A crowd-sourced volunteering platform to monitor the wellbeing of the seniors around us through simple check ins
+                A crowd-sourced farmng platform to monitor local farm inventory and to encourage Singaporeans to start local produce.
                 </p>
 
                 <Button className={'joinButton'} onClick={onClickRegister}>
-                    Join us as a Kaypoh!
+                    Join us as a farmer!
                 </Button>
                 <a style={{ cursor: 'pointer' }} onClick={onClickAbout}><ArrowDownOutlined /> Read About Us</a>
             </div>
