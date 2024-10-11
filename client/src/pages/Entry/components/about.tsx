@@ -13,35 +13,30 @@ const About: React.FC<EntryBannerProps> = (props) => {
                 <h1>let's farm!</h1>
 
                 <div className={cn('accentText')}>
-                    <a href='https://www.urbandictionary.com/define.php?term=kaypoh'>
+                    <a href='https://dictionary.cambridge.org/dictionary/english/farm'>
                         <b><i>farm</i></b>/ noun & adjective
                     </a>
                 </div>
 
                 <p>
-                    <b><i>Kaypoh</i></b> is a Singaporean slang usually used to described a person who is nosy or prying. But <b><i>kaypoh</i></b> does not necessarily need to be negative.
+                In Singapore, the urban landscape is changing, and so is our relationship with nature. As the demand for sustainable living grows, more people are turning to community farming to create greener spaces and grow their own food. But farming isn’t just about plants; it’s about people too.
                 </p>
                 <p>
-                    As the Singapore population ages, the demand for senior care has become more pressing.
-                    Most seniors worry about being alone at home and having no one to help them when they are in need. 
-                    In 2022 alone, <a href='https://www.moh.gov.sg/news-highlights/details/seniors-staying-alone'>79,000</a> seniors live alone, and <a href='https://youtu.be/d499mlwXWfk?si=sJtKF5I3Mdr_jJ2O'>more than 37</a> died alone unnoticed in 2023.
+                Many residents, especially seniors, may want to participate in these community farming initiatives but face challenges like physical limitations or lack of experience. Meanwhile, others may simply feel isolated from their neighbors. What if we could change that?
                 </p>
                 <p>
-                    But.. how can we show some care and concern to our next door seniors?
+                    But.. how can we farm?
                 </p>
 
                 <h2>
                     We can help.
                 </h2>
-
                 <p>
-                    Let’s Kaypoh is a user driven platform which aims to rally the help from the community to <b><i>"kaypoh"</i></b> and check-in on seniors who are living alone around their neighbourhood.
-
-                    We hope to build a closer knit community by encouraging the younger generations to cultivate an organic relationship with the elderly.
+                <b>Let’s Farm</b> is a user-driven platform that encourages the community to come together, support local farming efforts, and check in on neighbors who need a little help with their garden. Whether it's helping an elderly neighbor water their plants, offering advice on growing vegetables, or just lending a hand with soiling and harvesting, this platform seeks to foster a collaborative and caring community.
                 </p>
 
                 <h4>
-                    Let’s be a kind Kaypoh today!
+                Let’s build stronger, greener neighborhoods by connecting through community farming. Be a kind farmer today and help nurture both plants and relationships!
                 </h4>
 
                 <a style={{ cursor: 'pointer', marginTop: '1rem' }} onClick={props.onClickNextSection}> <ArrowDownOutlined /> See how it works </a>
