@@ -75,3 +75,11 @@ def days_last_visited():
 
     return jsonify({ "days": 5 }), 201
 
+def get_farm_details():
+    farmID = int(request.args.get('farm_id'))
+
+    farm_detail = list(senior_collection.find({"senior_id": farmID}))
+    if farm_detail is None:
+        print("Farm does not exist!")
+        return jsonify({"error": "Farm does not exist"}), 404
+    return Response(json.dumps(farm_detail[0], default=json_util.default), mimetype="application/json")

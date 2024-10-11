@@ -88,6 +88,14 @@ def update_visit_function():
 def days():
     return days_last_visited()
 
+@app.route("/join_farm", methods=["POST"])
+def join_farms():
+    return join_farm()
+
+@app.route("/farm_details", methods=["GET"])
+def farm_details():
+    return get_farm_details()
+
 
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
