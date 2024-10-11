@@ -1,0 +1,37 @@
+.seniorMarker {
+    background-color: #f9f9f9;
+    border-radius: 20px;
+    width: 60px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    padding: 0.1rem;
+    box-shadow: 0 2px 10px var(--color-gray-8);
+    /* z-index: -50; */
+}
+
+.seniorMarker.green {
+    background-color: #68dc25;
+    color: white;
+}
+
+.seniorMarker.yellow {
+    background-color: #ffc53d;
+    color: white;
+}
+
+.seniorMarker.red {
+    background-color: #f9173d;
+    color: white;
+}
+
+.userMarker {
+    background-color: #4a80f5;
+    width: 14px;
+    height: 14px;
+    border: 2px solid white;
+    border-radius: 20px;
+}

@@ -1,0 +1,185 @@
+.ant-descriptions  {
+    .ant-descriptions-row >td {
+        padding-bottom: 0.25rem;
+        padding-top: 0.05rem;
+    }
+    .ant-descriptions-item-content {
+        font-size: 12px;
+    }
+
+    .ant-descriptions-item-label {
+        font-size: 12px;
+        width: 80px;
+    }
+
+    .ant-descriptions-item-label::after {
+        margin-inline-start: 0;
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--color-gray-6);
+    padding: 1rem;
+    border-radius: 10px;
+    width: 90%;
+    /* z-index: 99234239; */
+
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    max-width: 320px;
+    margin-bottom: 1rem;
+    background-color: #f9f9f9;
+
+    @media (max-width: 400px) {
+        padding: 1rem;
+        width: 90%;
+    }
+
+    .ant-btn {
+        margin-top: 0.5rem;
+        width: 100px;
+    }
+}
+
+.card:hover {
+    transform: scale(1.005);
+    box-shadow: 0 2px 10px var(--color-gray-6);
+    transition: ease-in-out 0.3s;
+}
+
+.visitCard {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--color-gray-6);
+    margin-bottom: 0.5rem;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.visitInfo {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    align-items: center;
+
+    .ant-btn {
+        margin-top: 0.5rem;
+        width: 100%;
+        max-width: 500px;
+    }
+
+    h3 {
+        font-size: 18.72px;
+    }
+}
+
+.visitHeader {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.visitRow {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 0.25rem;
+}
+
+.visitDate {
+    font-size: 12px;
+    text-align: start;
+}
+
+.visitTitle {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.visitButtons {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.seniorProfile {
+    width: 100%;
+    margin-bottom: 1rem;
+    
+    @media (max-width: 400px) {
+        width: 80%;
+    }
+
+    h3 {
+        margin: 0rem;
+        font-size: 16px;
+    }
+
+    p {
+        margin-top: 0.25rem;
+        font-size: 12px;
+    }
+}
+
+.closeBtnDiv {
+    text-align: end;
+    height: 30px;
+}
+
+.seniorProfileDetailMini {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+    word-break: break-all;
+    margin: 0.5rem 0;
+    font-size: 14px;
+
+    .anticon {
+        font-size: 16px;
+        margin-right: 0.5rem;
+        color: var(--color-hover);
+    }
+
+    span {
+        text-align: start;
+        word-break: keep-all;
+        align-items: center;
+        margin-bottom: 0.25rem;
+        
+        h4 {
+            display: inline;
+            font-weight: 600;
+            color: var(--color-hover);
+        }
+    }
+}
+
+.seniorTitle {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}

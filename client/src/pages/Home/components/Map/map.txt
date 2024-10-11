@@ -1,0 +1,231 @@
+// import React, { useCallback, useEffect, useState } from 'react'
+// import { AdvancedMarker, AdvancedMarkerProps, InfoWindow, Map, MapCameraChangedEvent, useAdvancedMarkerRef } from '@vis.gl/react-google-maps';
+// import './styles.css'
+// import { SeniorInterface } from '../../../../models/interfaces';
+// import { SeniorCard } from '../../../../components/Card/SeniorCard';
+// import { Directions } from '../mapDirections';
+
+// export interface Coordinates {
+// 	lat: number,
+// 	lng: number
+// }
+
+// type Props = {
+// 	locations: SeniorInterface[]
+// 	defaultCenter: Coordinates
+// 	showDirections?: boolean
+// 	defaultZoom?: number
+// 	hideDetails?: boolean
+// 	currentLocation: Coordinates
+// }
+
+// export type MarkerProps = {
+// 	info: SeniorInterface;
+// 	position: Coordinates
+// 	hideDetails?: boolean
+// }
+
+
+// export const AdvancedMarkerWithRef = (
+// 	props: AdvancedMarkerProps & {
+// 		onMarkerClick: (marker: google.maps.marker.AdvancedMarkerElement) => void;
+// 	}
+// ) => {
+// 	const { children, onMarkerClick, ...advancedMarkerProps } = props;
+// 	const [markerRef, marker] = useAdvancedMarkerRef();
+
+// 	return (
+// 		<AdvancedMarker
+// 			onClick={() => {
+// 				if (marker) {
+// 					onMarkerClick(marker);
+// 				}
+// 			}}
+// 			ref={markerRef}
+// 			{...advancedMarkerProps}>
+// 			{children}
+// 		</AdvancedMarker>
+// 	);
+// };
+
+
+// const CustomMap: React.FC<Props> = ({ locations, defaultCenter, defaultZoom, showDirections, hideDetails, currentLocation }) => {
+// 	// const [closeAllInfoWindows, setCloseAllInfoWindows] = useState<boolean>(false);
+
+// 	const data = locations
+// 		.sort((a, b) => b.lat - a.lat)
+// 		.map((dataItem, index) => ({ dataItem, zIndex: index }));
+
+// 	const Z_INDEX_SELECTED = data.length;
+// 	const Z_INDEX_HOVER = data.length + 1;
+
+// 	const [markers] = useState(data);
+
+// 	const [hoverId, setHoverId] = useState<string | null>(null);
+// 	const onMouseEnter = useCallback((id: string | null) => setHoverId(id), []);
+// 	const onMouseLeave = useCallback(() => setHoverId(null), []);
+
+// 	const [selectedId, setSelectedId] = useState<string | null>(null);
+
+// 	const [selectedMarker, setSelectedMarker] =
+// 		useState<google.maps.marker.AdvancedMarkerElement | null>(null);
+
+// 	const [selectedSenior, setSelectedSenior] =
+// 		useState<SeniorInterface>();
+
+// 	const [infoWindowShown, setInfoWindowShown] = useState(false);
+
+// 	const onMarkerClick = useCallback(
+// 		(id: string | null, marker?: google.maps.marker.AdvancedMarkerElement) => {
+// 			setSelectedId(id);
+
+// 			if (marker) {
+// 				setSelectedMarker(marker);
+// 				setSelectedSenior(locations.find((senior) => senior.senior_id.toString() === id))
+// 			}
+
+// 			if (id !== selectedId) {
+// 				setInfoWindowShown(true);
+// 			} else {
+// 				setInfoWindowShown(isShown => !isShown);
+// 			}
+// 		},
+// 		[selectedId, locations]
+// 	);
+
+// 	const onMapClick = useCallback(() => {
+// 		setSelectedId(null);
+// 		setSelectedMarker(null);
+// 		setInfoWindowShown(false);
+// 	}, []);
+
+// 	const handleInfowindowCloseClick = useCallback(
+// 		() => setInfoWindowShown(false),
+// 		[]
+// 	);
+
+
+// 	// const CustomMarker: React.FC<MarkerProps> = ({ info, position, hideDetails }) => {
+// 	// 	const [showInfoWindow, setShowInfoWindow] = useState<boolean>(false);
+
+// 	// 	// useEffect(() => {
+// 	// 	// 	if (closeAllInfoWindows) {
+// 	// 	// 		setShowInfoWindow(false);
+// 	// 	// 	}
+// 	// 	// 	setCloseAllInfoWindows(false);
+// 	// 	// }, []);
+
+// 	// 	return (
+// 	// 		<AdvancedMarker
+// 	// 			position={position}
+// 	// 			onClick={() => {
+// 	// 				setShowInfoWindow(true);
+// 	// 				setCloseAllInfoWindows(false);
+// 	// 			}}
+// 	// 		>
+// 	// 			<div>
+// 	// 				{(showInfoWindow && !closeAllInfoWindows && !hideDetails) ?
+// 	// 					<SeniorCard
+// 	// 						// style={{zIndex: locations.length + 100, position: 'sticky'}}
+// 	// 						senior={info}
+// 	// 						closable={true}
+// 	// 						onClose={() => setShowInfoWindow(false)}
+// 	// 						showVisitBtn={true}
+// 	// 					/> :
+// 	// 					<div
+// 	// 						className={'seniorMarker'}
+// 	// 					// style={{zIndex: locations.indexOf(info),  position: 'sticky'}}
+// 	// 					>
+// 	// 						{info.name}
+// 	// 					</div>
+// 	// 				}
+// 	// 			</div>
+// 	// 		</AdvancedMarker>
+// 	// 	);
+// 	// }
+
+// 	const handleCameraChange = useCallback((ev: MapCameraChangedEvent) => {
+// 		console.log('camera changed: ', ev.detail);
+// 	}, []);
+
+
+// 	return (
+// 		<Map
+// 			clickableIcons={false}
+// 			disableDefaultUI
+// 			gestureHandling={'greedy'}
+// 			onCameraChanged={handleCameraChange}
+// 			mapId={'7c0e62f0200dd8aa'}
+// 			defaultZoom={defaultZoom ?? 13}
+// 			// onClick={() => setCloseAllInfoWindows(true)}
+// 			onClick={onMapClick}
+// 			defaultCenter={defaultCenter}
+// 		>
+// 			{markers.map(({ dataItem, zIndex: zIndexDefault }) => {
+// 				let zIndex = zIndexDefault;
+// 				const id = dataItem.senior_id.toString()
+
+// 				if (hoverId === id) {
+// 					zIndex = Z_INDEX_HOVER;
+// 				}
+
+// 				if (selectedId === id) {
+// 					zIndex = Z_INDEX_SELECTED;
+// 				}
+
+// 				// return <CustomMarker
+// 				// 	key={dataItem.senior_id}
+// 				// 	info={dataItem}
+// 				// 	position={{ lat: dataItem.lat, lng: dataItem.lon }}
+// 				// 	hideDetails={hideDetails}
+// 				// />
+
+// 				return <AdvancedMarkerWithRef
+// 					position={{ lat: dataItem.lat, lng: dataItem.lon }}
+// 					zIndex={zIndex}
+// 					style={{
+// 						transform: `scale(${[hoverId, selectedId].includes(id) ? 1.4 : 1})`
+// 					}}
+// 					onMarkerClick={(
+// 						marker: google.maps.marker.AdvancedMarkerElement
+// 					) => onMarkerClick(id, marker)}
+// 				>
+// 					<div className={'seniorMarker'}
+// 					onMouseEnter={() => onMouseEnter(id)}
+// 					onMouseLeave={onMouseLeave}
+// 					>
+// 						{dataItem.name}
+// 					</div>
+// 				</AdvancedMarkerWithRef>
+// 			})}
+
+// 			{infoWindowShown && selectedMarker && selectedSenior && (
+// 				<InfoWindow
+// 					anchor={selectedMarker}
+// 					onCloseClick={handleInfowindowCloseClick}>
+// 					<SeniorCard
+// 						senior={selectedSenior}
+// 						closable={true}
+// 						showVisitBtn={true}
+// 					/>
+// 				</InfoWindow>
+// 			)}
+
+// 			<AdvancedMarker
+// 				position={currentLocation}
+// 			>
+// 				<div className={'userMarker'} ></div>
+// 			</AdvancedMarker>
+
+// 			{showDirections &&
+// 				<Directions
+// 					origin={currentLocation}
+// 					destination={{ lat: locations[0].lat, lng: locations[0].lon }}
+// 				/>
+// 			}
+// 		</Map>
+// 	)
+// }
+
+// export default CustomMap
+

@@ -1,0 +1,92 @@
+.register-visit {
+    width: 85%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    .ant-form-item {
+        width: 100%;
+    }
+}
+
+.confirmButton {
+    text-align: center;
+    width: 300px;
+    height: 40px;
+    margin: 0.5rem 0;
+    background-color: #3DB06A;
+
+    border-radius: 60px;
+    color: var(--color-light);
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    height: 42px;
+    margin: 0.25rem 0;
+    border-color: transparent;
+    box-shadow: 0 2px 10px var(--color-gray-6);
+}
+
+.note {
+    width: 95%;
+    text-align: start;
+}
+
+.timeslotBtn {
+    width: 90px;
+    height: 30px;
+    border-radius: 16px;
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.registerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: calc(100vh - 2rem);
+    height: 100%;
+    overflow-y: scroll;
+    margin-bottom: 5rem;
+    width: 100vw;
+  
+    @media (max-height: 850px) {
+      padding-bottom: 4rem;
+    }
+}
+
+.registerHeader {
+    width: 90%;
+    text-align: start;
+    margin: 1rem 0rem;
+
+    @media (min-width: 1000px) {
+        text-align: center;
+    }
+  
+    h1 {
+        font-size: 40px;
+        margin-bottom: 0.5rem;
+        font-family: Poppins-SemiBold, sans-serif;
+    }
+  
+    p {
+        margin: 0;
+    }
+  }
+
+  .qr {
+    width: 320px;
+    height: 320px;
+    box-shadow: 0 2px 10px var(--color-gray-6);
+    /* border: 1px solid var(--color-gray-6); */
+    margin-bottom: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* padding: 10px; */
+  }

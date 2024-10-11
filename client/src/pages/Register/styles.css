@@ -1,0 +1,18 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 85%;
+    padding: 0;
+
+    @media (min-width: 700px) {
+        width: 600px;
+    }
+}
+
+.formInput {
+    @media (min-width: 700px) {
+        width: 600px;
+    }
+    width: 100%;
+}
