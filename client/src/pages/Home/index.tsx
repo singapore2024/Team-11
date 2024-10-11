@@ -115,13 +115,13 @@ const Home = () => {
             <div className={'header-container'}>
                 <div className='row' style={{ margin: 0 }}>
                     <div className={'header'} style={{ width: '100%', marginBottom: '0.5rem' }}>
-                        <h1  style={{ marginTop: '1rem', fontSize: '32px' }}>let's kaypoh!</h1>
-                        <p>Show some love to our seniors nearby! 
+                        <h1  style={{ marginTop: '1rem', fontSize: '32px' }}>let's farm!</h1>
+                        <p>Join the farming movement today! 
                             <Popover title="Need help?"
                             placement="bottomRight"
                             content={
                                 <div style={{maxWidth: '230px'}}>
-                                    Click on a senior's bubble to view more details and visit them. 
+                                    Click on a farm's bubble to view more details. 
                                     <p>
                                         The bubble colors indicate the urgency of visit required.
                                     </p>

@@ -19,8 +19,8 @@ const RegistrationSuccess = () => {
         <div className={'container-login'}>
             <div>
                 <img className={'bannerImg'} src={BannerImg} />
-                <h1 style={{marginTop: 0}}>let's kaypoh!</h1>
-                <div className='accent'><h3>You are officially a kaypoh!</h3></div>
+                <h1 style={{marginTop: 0}}>let's farm!</h1>
+                <div className='accent'><h3>You are officially a farmer!</h3></div>
                 <p >Thank you for volunteering with us! The world needs more people like you!</p>
             </div>
             <Button className='joinButton' onClick={onClickGetStarted}>Get Started</Button>

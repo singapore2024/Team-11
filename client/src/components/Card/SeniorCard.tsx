@@ -39,7 +39,7 @@ export const SeniorCard: React.FC<Props> = (props) => {
                 } else if (days === 1) {
                     daylabel = ' Yesterday'
                 } else {
-                    daylabel = `${String(days)} days ago`
+                    daylabel = `${String(days)}`
                 }
                 
                 if (days === "NEVER VISITED") {
@@ -125,7 +125,7 @@ export const SeniorCard: React.FC<Props> = (props) => {
             <div className='visitInfo'>
                 <div className='visitHeader' style={{ marginBottom: '0.5rem' }}>
                     <div className={'visitTitle'}>
-                        <span className={'seniorTitle'}>{seniorAvatar} {senior.name}, {senior.age}{senior.gender}</span>
+                        <span className={'seniorTitle'}>{seniorAvatar} {senior.name}</span>
                     </div>
                     <div className={'closeBtnDiv'}>
                         {closeBtn}
@@ -135,7 +135,7 @@ export const SeniorCard: React.FC<Props> = (props) => {
                 <div className='visitRow'>
                     <ZhihuOutlined style={{ marginRight: '0.5rem' }} />
                     <span style={{ marginRight: '0.25rem' }}>
-                        This senior speaks {' '}
+                        This farm grows {' '}
                     </span>
                     {separatedArray(senior.languages)}
                 </div>
@@ -143,7 +143,7 @@ export const SeniorCard: React.FC<Props> = (props) => {
                 <div className='visitRow'>
                     <CalendarOutlined style={{ marginRight: '0.5rem' }} />
                     <span style={{ marginRight: '0.25rem' }} >
-                        Last Visited:
+                        Number of Farmers:
                     </span>
                     <span style={{color: colorMarker}}>
                         {daysLastVisited}

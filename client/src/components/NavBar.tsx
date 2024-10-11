@@ -108,7 +108,7 @@ export const NavBar: React.FC<Props> = ({isLoggedIn}) => {
                 {bottomMenu}
             </div>
             <div className={`topAppNav ${scrollDirection === "down" ? "hide" : "show"}`}>
-                <h1>let's kaypoh{nameLoggedIn}</h1>
+                <h1>let's farm!{nameLoggedIn}</h1>
                 <div className={'appNavRow'}>
                     {topMenu}
                 </div>

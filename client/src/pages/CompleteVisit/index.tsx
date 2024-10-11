@@ -137,7 +137,7 @@ const CompleteVisit = () => {
   return (
     <div className={'container'}>
       <div className={cn('header', 'hide')}>
-        <h1>let's kaypoh!</h1>
+        <h1>let's farm!</h1>
       </div>
 
       <div className={'confirmVisit'}>

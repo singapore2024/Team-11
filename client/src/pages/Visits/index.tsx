@@ -64,8 +64,8 @@ const Visits = () => {
   return (
     <div className={'container'}>
       <div className={'header'}>
-        <h1>let's kaypoh!</h1>
-        <div className='accent'>Where to kaypoh next...</div>
+        <h1>let's farm!</h1>
+        <div className='accent'>Where to farm next...</div>
         {curVisits.length > 0 &&
           <>
             <h3>Current Visit</h3>

@@ -46,7 +46,7 @@ const CheckInVisit: React.FC = () => {
     return (
         <div className={'container'} style={{ marginBottom: 0, paddingBottom: 0 }}>
             <div className={'header'}>
-                <h1>let's kaypoh!</h1>
+                <h1>let's farm!</h1>
                 <h3 style={{ marginBottom: '0' }}>Check in visit <Popover title="Note"
                     placement="bottom"
                     content={

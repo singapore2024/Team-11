@@ -176,6 +176,6 @@ export const displayDaysLastVisited = (days: number | string) => {
     } else if (days === 1) {
         return 'Yesterday';
     } else {
-        return `${String(days)} days ago`;
+        return `${String(days)}`;
     }
 };

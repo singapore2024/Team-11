@@ -82,7 +82,7 @@ const RegisterVisit: React.FC = () => {
     return (
         <div className={'registerContainer'}>
             <div className={'registerHeader'}>
-                <h1>let's kaypoh!</h1>
+                <h1>let's farm!</h1>
                 <h3 style={{marginBottom: '0'}}>Register your visit</h3>
             </div>
 

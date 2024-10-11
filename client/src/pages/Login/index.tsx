@@ -80,8 +80,8 @@ const Login = () => {
         <div className={'container-login'}>
             <div>
                 <img className={'bannerImg'} src={BannerImg} />
-                <h1 style={{marginTop: 0}}>let's kaypoh!</h1>
-                <p>Welcome back our fellow kaypoh!</p>
+                <h1 style={{marginTop: 0}}>let's farm!</h1>
+                <p>Welcome back our fellow farmer!</p>
             </div>
 
             <div className={'form'}>
