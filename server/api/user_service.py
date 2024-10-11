@@ -10,8 +10,7 @@ import json
 config = dotenv_values(".env")
 
 user_collection = db['users']
-senior_collection = db['seniors']
-visit_collection = db['visits']
+senior_collection = db['farms']
 counter_collection = db['counters']
 
 def register_user():
@@ -91,6 +90,7 @@ def check_mobile():
     return Response(json.dumps(user[0], default=json_util.default), mimetype="application/json")
 
 def get_all_users():
+    print("getting users")
     users = list(user_collection.find())
     return Response(json.dumps(users, default=str), mimetype="application/json")
 

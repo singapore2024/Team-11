@@ -9,8 +9,7 @@ import json
 config = dotenv_values(".env")
 
 user_collection = db['users']
-senior_collection = db['seniors']
-visit_collection = db['visits']
+senior_collection = db['farms']
 counter_collection = db['counters']
 
 
