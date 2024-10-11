@@ -479,7 +479,7 @@ const RegisterVisit: React.FC = () => {
             size="large"
             onClick={handleJoinFarm}
             loading={loading}
-            style={{ width: "200px" }}
+            style={{ width: "200px", position:"fixed", left:1200, top:100}}
           >
             Join Farm
           </Button>
