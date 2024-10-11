@@ -1,34 +1,78 @@
 import { SeniorInterface, UserInterface } from "./interfaces";
 
-export const data: SeniorInterface[] = [
+export const seniorData: SeniorInterface[] = [
   {
-    id: "1",
-    title: "Mr",
-    name: "Lim",
-    gender: "M",
-    age: 78,
-    languages: ["Hokkien", "Mandarin"],
-    lastVisitedDate: "10 Sep 2024",
-    postalCode: "510773",
-    imageUrl:
-      "https://lh5.googleusercontent.com/p/AF1QipPbk2FP1r3FWXTKbEtB6H6jAjJN9ZZuUhts9BqL=w524-h208-p-k-no",
-    lat: 1.37625,
-    lon: 103.93609,
-  },
-  {
-    id: "2",
-    title: "Ms",
-    name: "Soh",
+    senior_id: 2,
+    name: "Paya Lebar Farm 2",
     gender: "F",
-    age: 85,
-    languages: ["English", "Cantonese"],
-    lastVisitedDate: "13 Sep 2024",
-    postalCode: "520123",
-    imageUrl:
-      "https://lh5.googleusercontent.com/p/AF1QipPbk2FP1r3FWXTKbEtB6H6jAjJN9ZZuUhts9BqL=w524-h208-p-k-no",
-    lat: 1.3766264708024798,
-    lon: 103.93051796826676,
+    age: 72,
+    languages: ["Basil", "Kang Kong"],
+    daysLastVisited: 10,
+    postal_code: 510774,
+    imageUrl: "https://lh5.googleusercontent.com/p/AF1QipPbk2FP1r3FWXTKbEtB6H6jAjJN9ZZuUhts9BqL=w524-h208-p-k-no",
+    lat: 0.001,
+    lon: 0.001
   },
+  {
+    senior_id: 3,
+    name: "Paya Lebar Farm 3",
+    gender: "M",
+    age: 65,
+    languages: ["Carrots", "Tomatoes"],
+    daysLastVisited: 15,
+    postal_code: 510775,
+    imageUrl: "https://lh5.googleusercontent.com/p/AF1QipPbk2FP1r3FWXTKbEtB6H6jAjJN9ZZuUhts9BqL=w524-h208-p-k-no",
+    lat: 0.001,
+    lon: -0.001
+  },
+  {
+    senior_id: 4,
+    name: "Paya Lebar Farm 4",
+    gender: "F",
+    age: 80,
+    languages: ["Spinach", "Bok Choy"],
+    daysLastVisited: 20,
+    postal_code: 510776,
+    imageUrl: "https://lh5.googleusercontent.com/p/AF1QipPbk2FP1r3FWXTKbEtB6H6jAjJN9ZZuUhts9BqL=w524-h208-p-k-no",
+    lat: -0.001,
+    lon: 0.001
+  },
+  {
+    senior_id: 5,
+    name: "Paya Lebar Farm 5",
+    gender: "M",
+    age: 68,
+    languages: ["Lettuce", "Radishes"],
+    daysLastVisited: 5,
+    postal_code: 510777,
+    imageUrl: "https://lh5.googleusercontent.com/p/AF1QipPbk2FP1r3FWXTKbEtB6H6jAjJN9ZZuUhts9BqL=w524-h208-p-k-no",
+    lat: 0.0005,
+    lon: 0.0005
+  },
+  {
+    senior_id: 6,
+    name: "Paya Lebar Farm 6",
+    gender: "F",
+    age: 75,
+    languages: ["Cucumbers", "Beans"],
+    daysLastVisited: 12,
+    postal_code: 510778,
+    imageUrl: "https://lh5.googleusercontent.com/p/AF1QipPbk2FP1r3FWXTKbEtB6H6jAjJN9ZZuUhts9BqL=w524-h208-p-k-no",
+    lat: 0.0008,
+    lon: -0.0008
+  },
+  {
+    senior_id: 7,
+    name: "Paya Lebar Farm 7",
+    gender: "M",
+    age: 70,
+    languages: ["Basil", "Spring Onions"],
+    daysLastVisited: 8,
+    postal_code: 510779,
+    imageUrl: "https://lh5.googleusercontent.com/p/AF1QipPbk2FP1r3FWXTKbEtB6H6jAjJN9ZZuUhts9BqL=w524-h208-p-k-no",
+    lat: -0.0003,
+    lon: 0.0004
+  }
 ];
 
 export const userData: UserInterface[] = [

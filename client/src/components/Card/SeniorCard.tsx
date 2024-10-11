@@ -32,22 +32,7 @@ export const SeniorCard: React.FC<Props> = (props) => {
         const fetchData = async () => {
             try {
                 const days = senior.daysLastVisited
-                let daylabel 
-
-                if (days === 0) {
-                    daylabel = ' Today'
-                } else if (days === 1) {
-                    daylabel = ' Yesterday'
-                } else {
-                    daylabel = `${String(days)}`
-                }
-                
-                if (days === "NEVER VISITED") {
-                    setDaysLastVisited(days);
-                } else {
-                    setDaysLastVisited(daylabel)
-                }
-
+                setDaysLastVisited(days);
             } catch (error) {
                 console.error("Error fetching days:", error);
             }
@@ -118,8 +103,9 @@ export const SeniorCard: React.FC<Props> = (props) => {
     })
     const seniorAvatar = <Avatar style={{height: '30px', marginRight: '0.5rem'}} src={senior.gender.toLowerCase() == 'm' ? Grandpa : Granny}/>
 
-    const colorMarker = senior.daysLastVisited === "NEVER VISITED" || senior.daysLastVisited > 5 ? '#f9173d' : 
-                        senior.daysLastVisited > 3 ? '#e1a416' : '#43ab07'
+    const colorMarker = senior.daysLastVisited > 5 ? '#43ab07 ' :
+                        senior.daysLastVisited > 3 ? '#e1a416' : '#f9173d'
+    
     return (
         <div className={'card'} style={props.style}>
             <div className='visitInfo'>
@@ -135,7 +121,7 @@ export const SeniorCard: React.FC<Props> = (props) => {
                 <div className='visitRow'>
                     <ZhihuOutlined style={{ marginRight: '0.5rem' }} />
                     <span style={{ marginRight: '0.25rem' }}>
-                        This farm grows {' '}
+                        Crops:
                     </span>
                     {separatedArray(senior.languages)}
                 </div>
@@ -143,7 +129,7 @@ export const SeniorCard: React.FC<Props> = (props) => {
                 <div className='visitRow'>
                     <CalendarOutlined style={{ marginRight: '0.5rem' }} />
                     <span style={{ marginRight: '0.25rem' }} >
-                        Number of Farmers:
+                        No. Farmers:
                     </span>
                     <span style={{color: colorMarker}}>
                         {daysLastVisited}

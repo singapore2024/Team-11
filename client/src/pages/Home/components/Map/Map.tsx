@@ -4,6 +4,7 @@ import './styles.css'
 import { SeniorInterface } from '../../../../models/interfaces';
 import { SeniorCard } from '../../../../components/Card/SeniorCard';
 import { Directions } from '../mapDirections';
+import { data, seniorData } from '../../../../models/dummyData';
 
 export interface Coordinates {
 	lat: number,
@@ -30,10 +31,17 @@ const CustomMap: React.FC<Props> = ({ locations, defaultCenter, defaultZoom, sho
 	const [closeAllInfoWindows, setCloseAllInfoWindows] = useState<boolean>(false);
 	const [selectedId, setSelectedId] = useState<number | null>(null);
 
-	const data = locations
+	// const data = locations
+	// 	.sort((a, b) => b.lat - a.lat)
+	// 	.map((snr, index) => ({snr, zIndex: index}))
+	// console.log(data)
+
+	// // for (const d of data) {
+	// // 	console.log(d.)
+	// // }
+	const data = seniorData 
 		.sort((a, b) => b.lat - a.lat)
 		.map((snr, index) => ({snr, zIndex: index}))
-
 	const Z_INDEX_SELECTED = data.length;
 
 
@@ -75,7 +83,7 @@ const CustomMap: React.FC<Props> = ({ locations, defaultCenter, defaultZoom, sho
 						:
 						<div 
 							className={`seniorMarker ${
-								info.daysLastVisited === "NEVER VISITED" || info.daysLastVisited > 7 ? 'grey' : 'green'
+								info.daysLastVisited === 0 ? 'grey' : info.daysLastVisited <=10 ? 'yellow' : 'green'
 							}`} 
 						>
 							{info.name}
