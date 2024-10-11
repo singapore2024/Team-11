@@ -83,7 +83,7 @@ const CustomMap: React.FC<Props> = ({ locations, defaultCenter, defaultZoom, sho
 						:
 						<div 
 							className={`seniorMarker ${
-								info.daysLastVisited === 0 ? 'grey' : info.daysLastVisited <=10 ? 'grey' : 'green'
+								info.daysLastVisited === 0 ? 'grey' : info.daysLastVisited <=10 ? 'yellow' : 'green'
 							}`} 
 						>
 							{info.name}
