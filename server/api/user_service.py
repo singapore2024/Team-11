@@ -10,8 +10,8 @@ import json
 config = dotenv_values(".env")
 
 user_collection = db['users']
-senior_collection = db['seniors']
-visit_collection = db['visits']
+farm_collection = db['farm']
+inventory_collection = db['inventory']
 counter_collection = db['counters']
 
 def register_user():
@@ -21,14 +21,12 @@ def register_user():
         return Response(json.dumps({"error": "Request body error in create new user"}), mimetype='application/json', status=400)
     existing_user = user_collection.find_one({
         "$or": [
-            {"nric": data['nric']},
-            {"email": data['email']},
-            {"mobile": data['mobile']}
+            {"email": data['email']}
         ]
     })
     
     if existing_user:
-        return jsonify({"error": "User with this NRIC, email, or mobile number already exists."}), 400
+        return jsonify({"error": "User with this email already exists."}), 400
 
     try:
         user_id = counter_collection.find_one_and_update(
