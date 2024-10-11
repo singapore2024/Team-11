@@ -15,7 +15,7 @@ const TopNav: React.FC<Props> = (props) => {
 
     return (
         <div className={`topNav ${scrollDirection === "down" ? "hide" : "show"}`}>
-            <h1>let's kaypoh!</h1>
+            <h1>let's farm!</h1>
             <div className={'navRow'}>
                 <a style={{ cursor: 'pointer' }} onClick={props.onClickFeatures}>Features</a>
                 <a style={{ cursor: 'pointer' }} onClick={props.onClickAbout}>About Us</a>

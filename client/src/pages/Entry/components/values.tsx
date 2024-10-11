@@ -14,16 +14,16 @@ const Features: React.FC<EntryBannerProps> = (props) => {
             title: 'High flexibility and convenience',
             icon: <EnvironmentOutlined />,
             children: (
-                <div>Volunteer with nearby seniors at a <b>time of your choice.</b> </div> 
+                <div>Farm with nearby farmers at a <b>time of your choice.</b> </div> 
             )
         },
         {
             key: 2,
-            title: 'Reduced language barriers',
+            title: 'Common Crops',
             icon: <ZhihuOutlined />,
             children: (
                 <div>
-                    Find seniors who speak the <b>same languages</b> as you.
+                    Find farmers who share the <b>same interest in crops</b> as you.
                 </div>
             )
         },
@@ -33,7 +33,7 @@ const Features: React.FC<EntryBannerProps> = (props) => {
             icon: <HeartOutlined />,
             children: (
                 <div>
-                    <b>As quick as 15 minutes</b> a visit to say hi with no minimum commitment period.
+                    <b>As quick as 15 minutes</b> a visit to the farm with no minimum commitment period.
                 </div>
             )
         },
@@ -93,20 +93,20 @@ const Features: React.FC<EntryBannerProps> = (props) => {
         <div className={'entryContainer'} ref={props.sectionRef}>
             <div className={cn('smallTitle', 'fullHeight')}>
                 <div className={'sectionHeading'}>Our Value Propositions</div>
-                <h1>let's kaypoh!</h1>
+                <h1>let's farm!</h1>
 
                 <h3 style={{marginBottom: 0}}>
-                    As a volunteer...
+                    As a farmer...
                 </h3>
 
                 {volunteerItems}
 
 
-                <h3 style={{marginBottom: 0, marginTop: '2rem'}}>
+                {/* <h3 style={{marginBottom: 0, marginTop: '2rem'}}>
                     As a befriender organisation...
                 </h3>
 
-                {orgItems}
+                {orgItems} */}
 
                 <a style={{ cursor: 'pointer', marginTop: '1rem' }} onClick={props.onClickNextSection}> <ArrowDownOutlined /> Meet the Team </a>
             </div>

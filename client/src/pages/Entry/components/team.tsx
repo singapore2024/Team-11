@@ -26,31 +26,38 @@ const Team: React.FC<Props> = (props) => {
   const members: memberItem[] = [
     {
       key: 1,
-      name: 'Ker Yang Low',
-      role: 'Product Manager',
+      name: 'Nicholas Halim',
+      role: 'Software Engineer',
       icon: <ProjectOutlined />,
       imgPath: Keryang,
     },
     {
       key: 2,
-      name: 'Nicholas Halim',
-      role: 'Backend Engineer',
+      name: 'Pang Rui Wei',
+      role: 'Software Engineer',
       icon: <ApiOutlined />,
       imgPath: Nic,
     },
     {
       key: 3,
-      name: 'Eileen Chua',
-      role: 'UI/UX Designer',
+      name: 'Patrina Wong',
+      role: 'Software Engineer',
       icon: <FormatPainterOutlined />,
       imgPath: Eileen,
     },
     {
       key: 4,
-      name: 'Josephine Hemingway',
-      role: 'Frontend Engineer',
-      icon: <DesktopOutlined />,
-      imgPath: Jo,
+      name: 'Marcus Yeo',
+      role: 'Software Engineer',
+      icon: <ProjectOutlined />,
+      imgPath: Keryang,
+    },
+    {
+      key: 5,
+      name: 'Nelson Choo',
+      role: 'Software Engineer',
+      icon: <ApiOutlined />,
+      imgPath: Nic,
     },
   ]
 
@@ -77,21 +84,21 @@ const Team: React.FC<Props> = (props) => {
     <div className={cn('teamContainer', 'fullHeight')} ref={props.teamRef}>
         <div className={cn('teamSection')}>
             <div className={'sectionHeading'} style={{textAlign: 'center'}}>Meet the team</div>
-            <h1>let's kaypoh!</h1>
+            <h1>let's farm!</h1>
 
             <div className={cn('accentText')}>
-              Team Bob (The Builders)
+              Team 11
             </div>
 
             <p>
-              We are a team passionate about helping the elderly around us! It's time to give back.
+              We are a team passionate for Singapre to increase our local produce!
             </p>
         </div>
         <div className={cn('team')}>
           {teamMembers}
         </div>
         <Button className={'joinButton'} onClick={props.onClickRegister} style={{marginBottom: '4rem'}}>
-              Start Volunteering!
+              Start Farming!
         </Button>
 			</div>
   )

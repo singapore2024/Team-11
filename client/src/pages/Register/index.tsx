@@ -103,9 +103,9 @@ const Register = () => {
         <div className={'container'}>
             <div className={'header'}>
                 <img className={'registerBannerImg'} src={BannerImg} />
-                <h1>let's kaypoh!</h1>
-                <h3>Register to be a kaypoh!</h3>
-                <p>Thank you for your interest in volunteering with us!</p>
+                <h1>let's farm!</h1>
+                <h3>Register to be a farmer!</h3>
+                <p>Thank you for your interest in farming with us!</p>
                 <p>Just a couple more questions...</p>
 
                 <p style={{marginTop: '2rem'}}>
