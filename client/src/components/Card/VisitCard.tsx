@@ -44,6 +44,7 @@ export const VisitCard: React.FC<Props> = (props) => {
 
   const [isActionsExpanded, setIsActionsExpanded] = useState<boolean>(false);
   const [isCancelModalOpen, setIsCancelModalOpen] = useState<boolean>(false);
+  const [isVisible, setIsVisible] = useState(true);
 
   const onClickCancelButton = () => {
     setIsCancelModalOpen(true);
@@ -101,6 +102,11 @@ export const VisitCard: React.FC<Props> = (props) => {
     navigateToRoute(`/check-in/${visit.visit_id}`, navigate);
   };
 
+  const handleLeave = () => {
+    setIsVisible(false);
+    // handleViewVisitDetails();
+  };
+
   let visitDetails;
   if (true) {
     visitDetails = (
@@ -139,6 +145,17 @@ export const VisitCard: React.FC<Props> = (props) => {
           </span>
         </div>
 
+        <div className="visitRow">
+          <a
+            style={{ marginRight: "0.25rem" }}
+            href="https://t.me/farmingtimee"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Group Link
+          </a>
+        </div>
+
         {/* <div className="visitRow">
           <ClockCircleOutlined style={{ marginRight: "0.5rem" }} />
           <span style={{ marginRight: "0.25rem" }}>Visit time:</span>
@@ -150,7 +167,7 @@ export const VisitCard: React.FC<Props> = (props) => {
           <span>Postal: {senior.postal_code}</span>
         </div> */}
 
-        {props.cancellable && (
+        {true && (
           <>
             <div className="visitRow">
               <a
@@ -180,11 +197,8 @@ export const VisitCard: React.FC<Props> = (props) => {
             {isActionsExpanded && (
               <div>
                 {curVisitStatus !== VisitStatus.EXPIRED && (
-                  <Button
-                    className={"cancelBtn"}
-                    onClick={handleViewVisitDetails}
-                  >
-                    View Details
+                  <Button className={"cancelBtn"} onClick={handleLeave}>
+                    Leave
                   </Button>
                 )}
                 {curVisitStatus === VisitStatus.UPCOMING && (
@@ -242,5 +256,5 @@ export const VisitCard: React.FC<Props> = (props) => {
     );
   }
 
-  return <div className="visitCard">{visitDetails}</div>;
+  return isVisible && <div className="visitCard">{visitDetails}</div>;
 };

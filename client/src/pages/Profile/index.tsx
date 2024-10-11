@@ -74,7 +74,7 @@ const Profile: React.FC = () => {
     fetchData();
   }, []);
 
-  const visitCards = pastVisits.map((visit) => {
+  const visitCards = pastVisits.slice(0, 2).map((visit) => {
     return <VisitCard key={visit.visit_id} visit={visit} />;
   });
 
