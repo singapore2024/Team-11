@@ -4,7 +4,7 @@ import './styles.css'
 import { SeniorInterface } from '../../../../models/interfaces';
 import { SeniorCard } from '../../../../components/Card/SeniorCard';
 import { Directions } from '../mapDirections';
-import { data, seniorData } from '../../../../models/dummyData';
+import { seniorData } from '../../../../models/dummyData';
 
 export interface Coordinates {
 	lat: number,
@@ -83,7 +83,7 @@ const CustomMap: React.FC<Props> = ({ locations, defaultCenter, defaultZoom, sho
 						:
 						<div 
 							className={`seniorMarker ${
-								info.daysLastVisited === 0 ? 'grey' : info.daysLastVisited <=10 ? 'yellow' : 'green'
+								info.daysLastVisited === 0 ? 'grey' : info.daysLastVisited <=10 ? 'grey' : 'green'
 							}`} 
 						>
 							{info.name}
