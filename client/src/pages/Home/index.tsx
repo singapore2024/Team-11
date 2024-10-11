@@ -8,18 +8,18 @@ import { PlaceAutocompleteClassic } from './components/classicAutocomplete'
 import CustomMap, { Coordinates } from './components/Map/Map'
 import { SeniorInterface, SupportedLanguages } from '../../models/interfaces'
 import { getAllSeniorsData, getDaysLastVisted, updateSenior } from '../../api'
-import { useNavigate } from 'react-router-dom'
-import { navigateToRoute } from '../../components/utils'
+// import { useNavigate } from 'react-router-dom'
+// import { navigateToRoute } from '../../components/utils'
 import { FilterOutlined, QuestionCircleTwoTone } from '@ant-design/icons'
 import { Button, Popover } from 'antd'
 import FilterModal from '../../components/FilterModal'
 
 const Home = () => {
-    const token = localStorage.getItem('access_token');
-    const navigate = useNavigate();
-    if (!token) {
-        navigateToRoute('/', navigate)
-    }
+    // const token = localStorage.getItem('access_token');
+    // const navigate = useNavigate();
+    // if (!token) {
+    //     navigateToRoute('/', navigate)
+    // }
     const [selectedPlace, setSelectedPlace] =
         useState<google.maps.places.PlaceResult | null>(null);
 
@@ -116,7 +116,7 @@ const Home = () => {
                 <div className='row' style={{ margin: 0 }}>
                     <div className={'header'} style={{ width: '100%', marginBottom: '0.5rem' }}>
                         <h1  style={{ marginTop: '1rem', fontSize: '32px' }}>let's farm!</h1>
-                        <p>Join the farming movement today! 
+                        <p>Show some love to our farmer nearby! 
                             <Popover title="Need help?"
                             placement="bottomRight"
                             content={

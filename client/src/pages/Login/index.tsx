@@ -43,36 +43,37 @@ const Login = () => {
     
     const onFinish: FormProps<FieldType>['onFinish'] = async (values) => {
         setLoading(true);
+        navigateToRoute('/home', navigate);
 
-        try {
-            setMobileExists(await checkMobileExists(values.mobile));
-        } catch (error) {
-            console.error("Error checking user mobile:", error);
-            setMobileExists(false);
-            setLoading(false);
-            form.resetFields();
-            return;
-        }
+        // try {
+        //     setMobileExists(await checkMobileExists(values.mobile));
+        // } catch (error) {
+        //     console.error("Error checking user mobile:", error);
+        //     setMobileExists(false);
+        //     setLoading(false);
+        //     form.resetFields();
+        //     return;
+        // }
 
-        if (!mobileExists) {
-            form.resetFields();
-            return;
-        }
+        // if (!mobileExists) {
+        //     form.resetFields();
+        //     return;
+        // }
 
-        try {
-            console.log('Logging in', loading)
-            localStorage.clear()
-            const response = await loginUser(values.mobile)
-            const { access_token, user } = response
-            localStorage.setItem('access_token', access_token)
-            localStorage.setItem('user_id', user.user_id)
-            localStorage.setItem('name', user.name)
-            navigateToRoute('/home', navigate);
-        } catch (error) {
-            console.error("Error logging in:", error);
-            form.resetFields();
-        }
-        setLoading(false);
+        // try {
+        //     console.log('Logging in', loading)
+        //     localStorage.clear()
+        //     const response = await loginUser(values.mobile)
+        //     const { access_token, user } = response
+        //     localStorage.setItem('access_token', access_token)
+        //     localStorage.setItem('user_id', user.user_id)
+        //     localStorage.setItem('name', user.name)
+        //     navigateToRoute('/home', navigate);
+        // } catch (error) {
+        //     console.error("Error logging in:", error);
+        //     form.resetFields();
+        // }
+        // setLoading(false);
         
     };
 
