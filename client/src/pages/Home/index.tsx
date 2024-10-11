@@ -121,9 +121,9 @@ const Home = () => {
                             placement="bottomRight"
                             content={
                                 <div style={{maxWidth: '230px'}}>
-                                    Click on a farm's bubble to view more details. 
+                                    Click on a farm's bubble to view more details and visit them. 
                                     <p>
-                                        The bubble colors indicate the urgency of visit required.
+                                        The bubble colors indicate the number of farmers who signed up in the farm.
                                     </p>
                                     <span className='legendRow'>
                                         <div className='legend green'/>
