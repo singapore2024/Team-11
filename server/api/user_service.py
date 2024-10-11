@@ -149,3 +149,11 @@ def join_farm():
     )
 
     return jsonify({"message": "User has successfully joined the farm"}), 200
+
+def get_user_joined_farms():
+    userID = int(request.args.get('user_id'))
+
+    user_document = user_collection.find_one({"user_id": userID}, {"farms": 1, "_id": 0})
+    user_farms = user_document["farms"]
+
+    return Response(json.dumps(user_farms, default=json_util.default), mimetype="application/json")

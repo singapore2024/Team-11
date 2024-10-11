@@ -96,6 +96,9 @@ def join_farms():
 def farm_details():
     return get_farm_details()
 
+@app.route("/joined_farms", methods=["GET"])
+def joined_farms():
+    return get_user_joined_farms()
 
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
